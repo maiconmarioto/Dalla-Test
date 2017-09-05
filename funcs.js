@@ -16,7 +16,7 @@ const encode = (data) => {
  * (string): string
  */
 const decode = (data) => {
-  return (new Buffer("" + data, 'base64'))
+  return (new Buffer("" + data, 'base64')).toString();
 }
 
 /**
@@ -83,9 +83,10 @@ module.exports.findNextMessage =  (inbox, lastHash) => {
       break
     }
   }
+
   let p  = path.join(inbox.dir, inbox.messages[found].hash)
   let mes = fs.readFileSync(p)
   // read and decode the message
-  return 'from: ' + decode(inbox.messages[found].from) + '\n---\n' +  decode(mes) + " of file: " + p
+  return 'from: ' + decode(inbox.messages[found].from) + '\n---\n' +  decode(mes)
 
 }
