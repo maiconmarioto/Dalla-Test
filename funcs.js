@@ -37,7 +37,7 @@ module.exports.loadDb =  (dbFile, cb) => {
   fs.readFile(dbFile,  (err, res) => {
     if (err) { return cb(err) }
 
-    var messages
+    let messages
     try {
       messages = JSON.parse(res)
     } catch (e) {

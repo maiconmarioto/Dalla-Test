@@ -2,7 +2,7 @@ const path = require('path')
 const funcs = require('./funcs')
 const encodeName = funcs.encodeName
 
-var session = {
+const session = {
   username: process.argv[2],
   lastMessageHash: process.argv[3]
 }
