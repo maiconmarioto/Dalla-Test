@@ -29,3 +29,17 @@ funcs.loadDb(dbFile, function (err, db) {
   // Paste the console output into the "Solution" field and you're done!
   console.log(nextMessage)
 })
+
+/*
+  node index.js bigbird88 60b725f10c9c85c70d97880dfe8191b3
+    from: @theRealElmo
+    ---
+    here's the message
+*/
+
+/*
+  node index.js alice 3b5d5c3712955042212316173ccf37be
+    from: @theRealElmo
+    ---
+    secret message from me to you
+ */
